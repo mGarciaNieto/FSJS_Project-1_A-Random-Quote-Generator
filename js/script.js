@@ -1,6 +1,7 @@
 /******************************************
 Treehouse FSJS Techdegree:
 project 1 - A Random Quote Generator
+@author Manuel Garcia-Nieto
 ******************************************/
 
 'use strict'
@@ -12,7 +13,6 @@ project 1 - A Random Quote Generator
 /***
  * `quotes` array
  ***/
-
 const quotes = [
   {
     quote: "Life has got all those twists and turns. You've got to hold on tight and off you go.",
@@ -54,6 +54,9 @@ const quotes = [
 
 const BACKGROUND_COLOR = ['#808080', '#17202a', '#1162ac', '#aeb6bf', '#f1948a', '#b491c3', '#1b2631']
 
+/**
+ * `getRandomNumber` function
+ */
 function getRandomNumber() {
   return Math.floor(Math.random() * quotes.length)
 }
@@ -64,7 +67,9 @@ function getRandomNumber() {
 function getRandomQuote() {
   return quotes[getRandomNumber()]
 }
-
+/**
+ * `getRamdonColor`function
+ */
 function getRandomColor() {
   return BACKGROUND_COLOR[getRandomNumber()]
 }
@@ -88,8 +93,13 @@ function printQuote() {
   document.getElementById('quote-box').innerHTML = strHTML
   document.querySelector('.container').style.backgroundColor = getRandomColor()
 }
-
-// setInterval(printQuote, 10000)
+/**
+ * `setInterval` function
+ * 
+ * @param  {} printQuote
+ * @param  {} 10000
+ */
+setInterval(printQuote, 10000)
 
 /***
  * click event listener for the print quote button
