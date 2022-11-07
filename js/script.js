@@ -95,9 +95,9 @@ function printQuote() {
 }
 /**
  * `setInterval` function
- * 
- * @param  {} printQuote
- * @param  {} 10000
+ *
+ * @param  {func} printQuote - Function
+ * @param  {int} 10000 - Time in milliseconds to delay between executions, in this case 10
  */
 setInterval(printQuote, 10000)
 
