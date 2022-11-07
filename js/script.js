@@ -60,21 +60,22 @@ const BACKGROUND_COLOR = ['#808080', '#17202a', '#1162ac', '#aeb6bf', '#f1948a',
 /**
  * `getRandomNumber` function
  */
-function getRandomNumber() {
-  return Math.floor(Math.random() * quotes.length)
+function getRandomNumber(number) {
+  return Math.floor(Math.random() * number)
 }
 
 /***
  * `getRandomQuote` function
  ***/
 function getRandomQuote() {
-  return quotes[getRandomNumber()]
+  return quotes[getRandomNumber(quotes.length)]
 }
+
 /**
  * `getRamdonColor`function
  */
 function getRandomColor() {
-  return BACKGROUND_COLOR[getRandomNumber()]
+  return BACKGROUND_COLOR[getRandomNumber(BACKGROUND_COLOR.length)]
 }
 
 /***
