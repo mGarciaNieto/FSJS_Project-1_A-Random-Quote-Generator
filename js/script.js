@@ -52,6 +52,9 @@ const quotes = [
   }
 ]
 
+/***
+ * `BACKGROUND_COLOR` array
+ ***/
 const BACKGROUND_COLOR = ['#808080', '#17202a', '#1162ac', '#aeb6bf', '#f1948a', '#b491c3', '#1b2631']
 
 /**
@@ -93,11 +96,12 @@ function printQuote() {
   document.getElementById('quote-box').innerHTML = strHTML
   document.querySelector('.container').style.backgroundColor = getRandomColor()
 }
+
 /**
  * `setInterval` function
  *
  * @param  {func} printQuote - Function
- * @param  {int} 10000 - Time in milliseconds to delay between executions, in this case 10
+ * @param  {int} 10000 - Time in milliseconds to delay between executions, in this case 10 seconds
  */
 setInterval(printQuote, 10000)
 
